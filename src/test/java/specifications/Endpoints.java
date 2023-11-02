@@ -9,4 +9,11 @@ public class Endpoints {
     public static String getApiBaseUri(){
         return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.base.uri");
     }
+    public static String getUserBasePath(){
+        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.user.base.path");
+    }
+
+    public static String getUserIdPath(){
+        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.user.id.path");
+    }
 }
