@@ -8,17 +8,36 @@ import io.restassured.specification.RequestSpecification;
 
 public class RequestSpecificationInitialization {
 
-    public RequestSpecBuilder requestSpecBuilder;
+    private RequestSpecBuilder requestSpecBuilder;
+    private static final boolean IS_ENABLE_REQUEST_LOG = false;
+    private static final boolean IS_ENABLE_RESPONSE_LOG = false;
 
-    public RequestSpecification setRequestSpecification(){
+    public RequestSpecification setRequestSpecification() {
         requestSpecBuilder = new RequestSpecBuilder();
 
         requestSpecBuilder
-                .setBaseUri(Endpoints.getApiBaseUri())
-                .setContentType(ContentType.JSON)
-                .addFilter( new ResponseLoggingFilter())
-                .addFilter( new RequestLoggingFilter());
+                .setBaseUri(Endpoints.getApiBaseUri());
+
+        setContentTypeAsJson();
+        enableRequestLog();
+        enableResponseLog();
 
         return requestSpecBuilder.build();
+    }
+
+    private void enableRequestLog() {
+        if (IS_ENABLE_REQUEST_LOG) {
+            requestSpecBuilder.addFilter(new RequestLoggingFilter());
+        }
+    }
+
+    private void enableResponseLog() {
+        if (IS_ENABLE_RESPONSE_LOG) {
+            requestSpecBuilder.addFilter(new ResponseLoggingFilter());
+        }
+    }
+
+    private void setContentTypeAsJson() {
+        requestSpecBuilder.setContentType(ContentType.JSON);
     }
 }
