@@ -1,5 +1,6 @@
 package specifications;
 
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -13,10 +14,8 @@ public class RequestSpecificationInitialization {
     private static final boolean IS_ENABLE_RESPONSE_LOG = false;
 
     public RequestSpecification setDefautlRequestSpecification() {
+        RestAssured.baseURI = Endpoints.getApiBaseUri();
         requestSpecBuilder = new RequestSpecBuilder();
-
-        requestSpecBuilder
-                .setBaseUri(Endpoints.getApiBaseUri());
 
         setContentTypeAsJson();
         enableRequestLog();
