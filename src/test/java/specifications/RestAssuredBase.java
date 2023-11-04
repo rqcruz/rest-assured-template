@@ -1,5 +1,6 @@
 package specifications;
 
+import data.payloads.login.LoginPayload;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -22,12 +23,21 @@ public class RestAssuredBase {
         return this;
     }
 
+    public RestAssuredBase setQueryParam(String queryParam, String value) {
+        requestSpecification.queryParam(queryParam, value);
+        return this;
+    }
+
+    public RestAssuredBase body(Object payload) {
+        requestSpecification.body(payload);
+        return this;
+    }
+
     public Response sendGetRequest(String url) {
         return requestSpecification.when().get(url);
     }
 
-    public RestAssuredBase setQueryParam(String queryParam, String value) {
-        requestSpecification.queryParam(queryParam, value);
-        return this;
+    public Response sendPostRequest(String url) {
+        return requestSpecification.when().post(url);
     }
 }
