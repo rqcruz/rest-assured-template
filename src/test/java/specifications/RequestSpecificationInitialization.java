@@ -12,7 +12,7 @@ public class RequestSpecificationInitialization {
     private static final boolean IS_ENABLE_REQUEST_LOG = false;
     private static final boolean IS_ENABLE_RESPONSE_LOG = false;
 
-    public RequestSpecification setRequestSpecification() {
+    public RequestSpecification setDefautlRequestSpecification() {
         requestSpecBuilder = new RequestSpecBuilder();
 
         requestSpecBuilder

@@ -1,27 +1,28 @@
 package requests.example.user;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import specifications.Endpoints;
-import specifications.RequestSpecificationInitialization;
+import specifications.RestAssuredBase;
 
 public class UserRequest {
 
-    public Response requestByUserId(String userId){
-       return RestAssured
-                .given()
-                .spec(new RequestSpecificationInitialization().setRequestSpecification())
-                .pathParam("id", userId)
-                .when()
-                .get(Endpoints.getUserIdPath());
+    RestAssuredBase restAssuredBased;
+
+    public Response requestByUserId(String userId) {
+        restAssuredBased = new RestAssuredBase();
+
+        return restAssuredBased
+                .setDefaultRequestSpecification()
+                .setPathParam("id", userId)
+                .sendGetRequest(Endpoints.getUserIdPath());
     }
 
-    public Response requestLimitingQuantityOfUsers(Integer limitOfUsers){
-        return RestAssured
-                .given()
-                .spec(new RequestSpecificationInitialization().setRequestSpecification())
-                .queryParam("limit", limitOfUsers)
-                .when()
-                .get(Endpoints.getUserBasePath());
+    public Response requestLimitingQuantityOfUsers(String limitOfUsers) {
+        restAssuredBased = new RestAssuredBase();
+
+        return restAssuredBased
+                .setDefaultRequestSpecification()
+                .setQueryParam("limit", limitOfUsers)
+                .sendGetRequest(Endpoints.getUserBasePath());
     }
 }

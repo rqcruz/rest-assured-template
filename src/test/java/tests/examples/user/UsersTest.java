@@ -1,6 +1,7 @@
 package tests.examples.user;
 
 import static org.hamcrest.Matchers.*;
+
 import org.junit.jupiter.api.Test;
 import requests.example.user.UserRequest;
 
@@ -26,7 +27,7 @@ public class UsersTest {
     public void requestLimitingTheQuantityOfUsers() {
         userRequest = new UserRequest();
 
-        userRequest.requestLimitingQuantityOfUsers(2)
+        userRequest.requestLimitingQuantityOfUsers("2")
                 .then()
                 .statusCode(200)
                 .body("id", hasSize(2))
