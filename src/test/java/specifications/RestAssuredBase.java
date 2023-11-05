@@ -1,13 +1,12 @@
 package specifications;
 
-import data.payloads.login.LoginPayload;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class RestAssuredBase {
 
-    private RequestSpecification requestSpecification;
+    private final RequestSpecification requestSpecification;
 
     public RestAssuredBase() {
         requestSpecification = RestAssured.given();
@@ -45,9 +44,7 @@ public class RestAssuredBase {
         return requestSpecification.when().put(url);
     }
 
-    public Response sendPatchRequest(String url) { return requestSpecification.when().patch(url);
-    }
+    public Response sendPatchRequest(String url) { return requestSpecification.when().patch(url); }
 
-    public Response sendDeleteRequest(String url) { return requestSpecification.when().delete(url);
-    }
+    public Response sendDeleteRequest(String url) { return requestSpecification.when().delete(url); }
 }
