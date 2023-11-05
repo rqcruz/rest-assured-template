@@ -44,4 +44,8 @@ public class RestAssuredBase {
     public Response sendPutRequest(String url) {
         return requestSpecification.when().put(url);
     }
+
+    public Response sendPatchRequest(String url) {
+        return requestSpecification.when().patch(url);
+    }
 }
