@@ -22,7 +22,7 @@ public class Endpoints {
         return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.login.path");
     }
 
-    public static String getUpdateProductPath() {
-        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.update.product.path");
+    public static String getProductPath() {
+        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.product.path");
     }
 }
