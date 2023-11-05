@@ -16,7 +16,7 @@ public class ProductRequest {
                 .setDefaultRequestSpecification()
                 .body(new ProductPayload(title, price, description, image, category))
                 .setPathParam("id", productId)
-                .sendPutRequest(Endpoints.getUpdateProductPath());
+                .sendPutRequest(Endpoints.getProductPath());
     }
 
     public Response requestToUpdateProductUsingPatchRequest(String productId, String title, Double price, String description, String image, String category) {
@@ -26,6 +26,15 @@ public class ProductRequest {
                 .setDefaultRequestSpecification()
                 .body(new ProductPayload(title, price, description, image, category))
                 .setPathParam("id", productId)
-                .sendPatchRequest(Endpoints.getUpdateProductPath());
+                .sendPatchRequest(Endpoints.getProductPath());
+    }
+
+    public Response requestToDeleteProduct(String productId) {
+        restAssuredBased = new RestAssuredBase();
+
+        return restAssuredBased
+                .setDefaultRequestSpecification()
+                .setPathParam("id", productId)
+                .sendDeleteRequest(Endpoints.getProductPath());
     }
 }
