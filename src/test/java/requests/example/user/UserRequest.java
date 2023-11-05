@@ -6,7 +6,7 @@ import specifications.RestAssuredBase;
 
 public class UserRequest {
 
-    RestAssuredBase restAssuredBased;
+    private RestAssuredBase restAssuredBased;
 
     public Response requestByUserId(String userId) {
         restAssuredBased = new RestAssuredBase();
