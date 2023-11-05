@@ -21,4 +21,8 @@ public class Endpoints {
     public static String getLoginPath() {
         return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.login.path");
     }
+
+    public static String getUpdateProductPath() {
+        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.update.product.path");
+    }
 }
