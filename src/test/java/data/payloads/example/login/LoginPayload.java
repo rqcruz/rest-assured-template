@@ -1,14 +1,14 @@
-package data.payloads.login;
+package data.payloads.example.login;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LoginPayload {
 
     @JsonProperty("username")
-    private String username;
+    private final String username;
 
     @JsonProperty("password")
-    private String password;
+    private final String password;
 
     public LoginPayload(String username, String password) {
         this.username = username;

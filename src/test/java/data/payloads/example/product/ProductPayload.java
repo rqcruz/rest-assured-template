@@ -1,23 +1,23 @@
-package data.payloads.product;
+package data.payloads.example.product;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ProductPayload {
 
     @JsonProperty("title")
-    private String title;
+    private final String title;
 
     @JsonProperty("price")
-    private Double price;
+    private final Double price;
 
     @JsonProperty("description")
-    private String description;
+    private final String description;
 
     @JsonProperty("image")
-    private String image;
+    private final String image;
 
     @JsonProperty("category")
-    private String category;
+    private final String category;
 
     public ProductPayload(String title, Double price, String description, String image, String category) {
         this.title = title;
