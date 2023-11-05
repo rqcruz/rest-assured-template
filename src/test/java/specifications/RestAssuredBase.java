@@ -45,7 +45,9 @@ public class RestAssuredBase {
         return requestSpecification.when().put(url);
     }
 
-    public Response sendPatchRequest(String url) {
-        return requestSpecification.when().patch(url);
+    public Response sendPatchRequest(String url) { return requestSpecification.when().patch(url);
+    }
+
+    public Response sendDeleteRequest(String url) { return requestSpecification.when().delete(url);
     }
 }
