@@ -2,7 +2,6 @@ package tests.examples.login;
 
 import org.junit.jupiter.api.Test;
 import requests.example.login.LoginRequest;
-import requests.example.user.UserRequest;
 
 import static org.hamcrest.Matchers.*;
 
