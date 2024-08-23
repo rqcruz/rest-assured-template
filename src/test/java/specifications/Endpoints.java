@@ -10,19 +10,15 @@ public class Endpoints {
         return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.base.uri");
     }
 
-    public static String getUserBasePath() {
-        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.user.base.path");
+    public static String getAllUsers() {
+        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.users.path");
     }
 
-    public static String getUserIdPath() {
-        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.user.id.path");
+    public static String getUserById() {
+        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.id.users.path");
     }
 
-    public static String getLoginPath() {
-        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.login.path");
-    }
-
-    public static String getProductPath() {
-        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.product.path");
+    public static String getAuthLogin() {
+        return GetProperties.getValue(API_PROPERTIES_FILE_PATH, "api.auth.login.path");
     }
 }

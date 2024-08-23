@@ -1,27 +1,27 @@
 package specifications;
 
-import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
-public class RequestSpecificationInitialization {
+public class RequestSpecificationSetup {
 
     private RequestSpecBuilder requestSpecBuilder;
     private static final boolean IS_ENABLE_REQUEST_LOG = false;
     private static final boolean IS_ENABLE_RESPONSE_LOG = false;
 
     public RequestSpecification setDefautlRequestSpecification() {
-        RestAssured.baseURI = Endpoints.getApiBaseUri();
         requestSpecBuilder = new RequestSpecBuilder();
 
-        setContentTypeAsJson();
         enableRequestLog();
         enableResponseLog();
 
-        return requestSpecBuilder.build();
+        return requestSpecBuilder
+                .setBaseUri(Endpoints.getApiBaseUri())
+                .setContentType(ContentType.JSON)
+                .build();
     }
 
     private void enableRequestLog() {
@@ -34,9 +34,5 @@ public class RequestSpecificationInitialization {
         if (IS_ENABLE_RESPONSE_LOG) {
             requestSpecBuilder.addFilter(new ResponseLoggingFilter());
         }
-    }
-
-    private void setContentTypeAsJson() {
-        requestSpecBuilder.setContentType(ContentType.JSON);
     }
 }
