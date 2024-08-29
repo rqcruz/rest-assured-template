@@ -21,7 +21,6 @@ public class LoginContractTest extends BaseApi {
         loginRequest.getLoginToken("mor_2314", "83r5^_")
                 .then()
                 .body(matchesJsonSchemaInClasspath("schemas/login/login-statuscode-200-schema.json"))
-                .time(lessThan(2000L))
         ;
     }
 

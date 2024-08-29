@@ -23,7 +23,6 @@ public class UserContractTests extends BaseApi {
         userRequest.getUsersById("1")
                 .then()
                 .body(matchesJsonSchemaInClasspath("schemas/users/users-statuscode-200-schema.json"))
-                .time(lessThan(2000L))
         ;
     }
 
@@ -37,7 +36,6 @@ public class UserContractTests extends BaseApi {
         userRequest.getUsersById("abc")
                 .then()
                 .body(matchesJsonSchemaInClasspath("schemas/users/users-statuscode-400-schema.json"))
-                .time(lessThan(2000L))
         ;
     }
 

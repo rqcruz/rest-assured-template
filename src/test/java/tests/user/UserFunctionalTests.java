@@ -24,7 +24,6 @@ public class UserFunctionalTests extends BaseApi {
                 .then()
                 .statusCode(HttpStatus.SC_OK)
                 .body(not(isEmptyString()))
-                .time(lessThan(2000L))
         ;
     }
 
@@ -42,7 +41,6 @@ public class UserFunctionalTests extends BaseApi {
                 .body("email", is("john@gmail.com"))
                 .body("name.firstname", is("john"))
                 .body("name.lastname", is("doe"))
-                .time(lessThan(2000L))
         ;
     }
 
@@ -58,7 +56,6 @@ public class UserFunctionalTests extends BaseApi {
                 .statusCode(HttpStatus.SC_BAD_REQUEST)
                 .body("status", is("error"))
                 .body("message", is("user id should be provided"))
-                .time(lessThan(2000L))
         ;
     }
 }

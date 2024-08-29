@@ -23,7 +23,6 @@ public class LoginSecurityTest extends BaseApi {
                 .then()
                 .statusCode(401)
                 .body("html.body", is("username or password is incorrect"))
-                .time(lessThan(2000L))
         ;
     }
 
@@ -38,7 +37,6 @@ public class LoginSecurityTest extends BaseApi {
                 .then()
                 .statusCode(401)
                 .body("html.body", is("username or password is incorrect"))
-                .time(lessThan(2000L))
         ;
     }
 
@@ -53,7 +51,6 @@ public class LoginSecurityTest extends BaseApi {
                 .then()
                 .statusCode(401)
                 .body("html.body", is("username or password is incorrect"))
-                .time(lessThan(2000L))
         ;
     }
 

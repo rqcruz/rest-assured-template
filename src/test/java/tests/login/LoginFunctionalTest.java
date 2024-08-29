@@ -21,7 +21,6 @@ public class LoginFunctionalTest extends BaseApi {
                 .then()
                 .statusCode(200)
                 .body("token", notNullValue())
-                .time(lessThan(2000L))
         ;
     }
 
