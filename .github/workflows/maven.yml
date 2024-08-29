@@ -18,5 +18,32 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Running integrated tests with Maven
       run: mvn test
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: extentreports
+        path: integrated-test-report/
+        retention-days: 1
+
+# Configure Pages
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v3
+
+# Upload the report as a pages artifact
+    - name: Upload Pages Artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: integrated-test-report/
+
+# Deploy the Pages site
+  deploy:
+    needs: test
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
