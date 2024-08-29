@@ -39,7 +39,7 @@ jobs:
 
 # Deploy the Pages site
   deploy:
-    needs: test
+    needs: test-execution
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
