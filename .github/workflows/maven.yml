@@ -38,7 +38,7 @@ jobs:
         path: integrated-test-report/
 
 # Deploy the Pages site
-  deploy:
+  deploy-test-report:
     needs: test-execution
     environment:
       name: github-pages
