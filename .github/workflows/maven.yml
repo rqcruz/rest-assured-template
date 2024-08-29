@@ -24,7 +24,7 @@ jobs:
       if: always()
       with:
         name: extentreports
-        path: integrated-test-report/
+        path: target/integrated-test-report
         retention-days: 1
 
 # Configure Pages
@@ -35,7 +35,7 @@ jobs:
     - name: Upload Pages Artifact
       uses: actions/upload-pages-artifact@v2
       with:
-        path: integrated-test-report/
+        path: target/integrated-test-report
 
 # Deploy the Pages site
   deploy-test-report:
