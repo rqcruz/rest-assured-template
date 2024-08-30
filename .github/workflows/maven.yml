@@ -20,27 +20,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+
     - name: Running integrated tests with Maven
-      run: mvn test
-    - uses: actions/upload-artifact@v3
-      if: always()
-      continue-on-error: true
-      with:
-        name: extentreports
-        path: target/integrated-test-report
-        retention-days: 1
+      run: mvn clean test
 
-    - name: Get ExtentReport
-      uses: actions/checkout@v4
-      if: always()
-      continue-on-error: true
+    - name: Deploy pages
+      uses: JamesIves/github-pages-deploy-action@v4.5.0
       with:
-        ref: gh-pages
-        path: gh-pages
-
-    - name: Publish ExtentReport HTML report
-      if: always()
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./integrated-test-report/
+        branch: gh-pages
+        folder: ./ExtentReport/Reports
