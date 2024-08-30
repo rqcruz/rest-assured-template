@@ -1,9 +1,7 @@
 package tests.user;
 
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import requests.user.UserRequest;
 import tests.BaseApi;
 
@@ -73,4 +71,13 @@ public class UserFunctionalTests extends BaseApi {
                 .body("message", is("user id should be provided"))
         ;
     }
+
+    @Test
+    @Tag("report")
+    @Disabled("Test disabled on purpose")
+    @DisplayName("Test disabled for the purpose of displaying its status in the report")
+    void onlyToDisplayTheDisabledStatusInTheTestReport() {
+        // Disabled test
+    }
+
 }
