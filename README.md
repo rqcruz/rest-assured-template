@@ -1,6 +1,6 @@
 # Template for API testing automation with Rest Assured
 
-| Branch |                                              Pipeline                                              |              Relatório da úlltima execução              |
+| Branch |                                              Pipeline                                              |              Latest Test Execution Report               |
 |--------|:--------------------------------------------------------------------------------------------------:|:-------------------------------------------------------:|
 | main   | ![pipeline](https://github.com/rqcruz/rest-assured-template/actions/workflows/maven.yml/badge.svg) | [link](https://rqcruz.github.io/rest-assured-template/) |
 
