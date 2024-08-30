@@ -1,8 +1,8 @@
 # Template for API testing automation with Rest Assured
 
-| Branch |                                     Pipeline                                      |              Relatório da úlltima execução              |
-|--------|:---------------------------------------------------------------------------------:|:-------------------------------------------------------:|
-| main   | ![pipeline](https://github.com/github/docs/actions/workflows/maven.yml/badge.svg) | [link](https://rqcruz.github.io/rest-assured-template/) |
+| Branch |                                              Pipeline                                              |              Relatório da úlltima execução              |
+|--------|:--------------------------------------------------------------------------------------------------:|:-------------------------------------------------------:|
+| main   | ![pipeline](https://github.com/rqcruz/rest-assured-template/actions/workflows/maven.yml/badge.svg) | [link](https://rqcruz.github.io/rest-assured-template/) |
 
 ## Welcome 🖐️
 
