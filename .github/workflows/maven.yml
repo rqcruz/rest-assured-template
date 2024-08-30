@@ -22,28 +22,23 @@ jobs:
       run: mvn test
     - uses: actions/upload-artifact@v3
       if: always()
+      continue-on-error: true
       with:
         name: extentreports
         path: target/integrated-test-report
         retention-days: 1
 
-# Configure Pages
-    - name: Configure GitHub Pages
-      uses: actions/configure-pages@v3
-
-# Upload the report as a pages artifact
-    - name: Upload Pages Artifact
-      uses: actions/upload-pages-artifact@v2
+    - name: Get ExtentReport
+      uses: actions/checkout@v4
+      if: always()
+      continue-on-error: true
       with:
-        path: target/integrated-test-report
+        ref: gh-pages
+        path: gh-pages
 
-# Deploy the Pages site
-  deploy-test-report:
-    needs: test-execution
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+    - name: Publish ExtentReport HTML report
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3.7.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: integrated-test-report/
