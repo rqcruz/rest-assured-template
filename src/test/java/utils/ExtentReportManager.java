@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public class ExtentReportManager implements TestWatcher {
 
-    private static final String REPORT_PATH = "target/integrated-test-report/test-execution-report.html";
+    private static final String REPORT_PATH = "target/integrated-test-report/index.html";
     private static final String REPORT_NAME = "API Integrated Test Execution Report";
     private static final String DOCUMENT_TITLE = "API Integrated Test Execution Report";
     private static final String ENCODING = "utf-8";
