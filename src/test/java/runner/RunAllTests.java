@@ -5,7 +5,7 @@ import org.junit.platform.suite.api.Suite;
 import org.junit.platform.suite.api.SuiteDisplayName;
 
 @Suite
-@SuiteDisplayName("Rodar todos os testes")
+@SuiteDisplayName("Running All Tests Suite")
 @SelectClasses({RunFunctionalTests.class, RunContractTests.class, RunSecurityTests.class})
 public class RunAllTests {
 }
