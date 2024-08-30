@@ -58,4 +58,19 @@ public class UserFunctionalTests extends BaseApi {
                 .body("message", is("user id should be provided"))
         ;
     }
+
+    @Test
+    @Tag("regression")
+    @Tag("negative-scenario")
+    @DisplayName("The request using special characters instead number should return status code 400")
+    void requestUsingSpecialCharactersAsIdShouldReturnAnError() {
+        userRequest = new UserRequest();
+
+        userRequest.getUsersById("@!#")
+                .then()
+                .statusCode(HttpStatus.SC_BAD_REQUEST)
+                .body("status", is("error"))
+                .body("message", is("user id should be provided"))
+        ;
+    }
 }
