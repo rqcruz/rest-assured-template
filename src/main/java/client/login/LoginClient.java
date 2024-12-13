@@ -1,19 +1,20 @@
 package client.login;
 
-import data.payloads.login.LoginPayload;
+import dto.LoginDTO;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import specifications.Endpoints;
 import specifications.RequestSpecificationSetup;
 
 public class LoginClient {
 
-    public Response getLoginToken(String user, String password) {
+    public ValidatableResponse getLoginToken(LoginDTO loginDTO) {
         return RestAssured
                 .given()
                 .spec(new RequestSpecificationSetup().setDefautlRequestSpecification())
-                .body(new LoginPayload(user, password))
+                .body(loginDTO)
                 .when()
-                .post(Endpoints.getAuthLogin());
+                .post(Endpoints.getAuthLogin())
+                .then();
     }
 }
