@@ -61,39 +61,41 @@ The project follows the structure below:
 ```
 .
 ├── src
+│   ├── main
+│   │   └── java
+│   │       ├── clients
+│   │       │   ├── login/
+│   │       │   └── users/
+│   │       ├── data
+│   │       │   └── payloads
+│   │       │       └── login/
+│   │       ├── specifications/
+│   │       └── utils/
 │   └── test
 │       ├── java
-│       │   ├── data
-│       │   │   └── payloads
-│       │   │       └── login
-│       │   ├── requests
-│       │   │   ├── login
-│       │   │   └── users
-│       │   ├── runner
-│       │   ├── specifications
-│       │   ├── tests
-│       │   │   ├── login
-│       │   │   └── users
-│       │   └── utils
+│       │   ├── runner/
+│       │   └── tests
+│       │       ├── login/
+│       │       └── users/
 │       └── resources
-│           ├── properties
+│           ├── properties/
 │           └── schema
-│               ├── login
-│               └── users
+│               ├── login/
+│               └── users/
 ├── pom.xml
 ├── README.md
 ```
 
-- `src/test/java/data`: classes that return objects to be used/serialized in requests.
-- `src/test/java/requests`: classes that return methods that trigger requests. Each subfolder represents an API route.
+- `src/main/java/data`: classes that return objects to be used/serialized in clients.
+- `src/main/java/clients`: classes that return methods that trigger clients. Each subfolder represents an API route.
+- `src/main/java/specifications`: classes with the specifications and other request configurations.
+- `src/main/java/utils`: classes with methods to provide auxiliary functionality that does not fit directly into a
+  specific class.
 - `src/test/java/runner`: classes that run the test suites. They can run a specific group or all the tests in the
   project.
-- `src/test/java/specifications`: classes with the specifications and other request configurations.
 - `src/test/java/tests`: test classes. Each subfolder represents the test suite for an API route.
-- `src/test/java/utils`: classes with methods to provide auxiliary functionality that does not fit directly into a
-  specific class.
 - `src/test/resources/properties`: files with properties used by other classes.
-- `src/test/resources/schema`: files with the JSON schemas of the requests to be used in the contract tests.
+- `src/test/resources/schema`: files with the JSON schemas of the clients to be used in the contract tests.
 
 [back to the index 🔝](#index)
 <br/>

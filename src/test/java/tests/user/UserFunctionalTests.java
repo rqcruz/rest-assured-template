@@ -2,23 +2,23 @@ package tests.user;
 
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.*;
-import requests.user.UserRequest;
+import client.user.UserClient;
 import tests.BaseApi;
 
 import static org.hamcrest.Matchers.*;
 
 public class UserFunctionalTests extends BaseApi {
 
-    private UserRequest userRequest;
+    private UserClient userClient;
 
     @Test
     @Tag("regression")
     @Tag("positive-scenario")
     @DisplayName("The request should return the list of all users")
     void getAllUsers() {
-        userRequest = new UserRequest();
+        userClient = new UserClient();
 
-        userRequest.getAllUsers()
+        userClient.getAllUsers()
                 .then()
                 .statusCode(HttpStatus.SC_OK)
                 .body(not(isEmptyString()))
@@ -30,9 +30,9 @@ public class UserFunctionalTests extends BaseApi {
     @Tag("positive-scenario")
     @DisplayName("The request should return a single users by ID")
     void getUserByID() {
-        userRequest = new UserRequest();
+        userClient = new UserClient();
 
-        userRequest.getUsersById("1")
+        userClient.getUsersById("1")
                 .then()
                 .statusCode(HttpStatus.SC_OK)
                 .body("id", is(1))
@@ -47,9 +47,9 @@ public class UserFunctionalTests extends BaseApi {
     @Tag("negative-scenario")
     @DisplayName("The request using words instead number should return status code 400")
     void requestUsingWordsAsIdShouldReturnAnError() {
-        userRequest = new UserRequest();
+        userClient = new UserClient();
 
-        userRequest.getUsersById("aaa")
+        userClient.getUsersById("aaa")
                 .then()
                 .statusCode(HttpStatus.SC_BAD_REQUEST)
                 .body("status", is("error"))
@@ -62,9 +62,9 @@ public class UserFunctionalTests extends BaseApi {
     @Tag("negative-scenario")
     @DisplayName("The request using special characters instead number should return status code 400")
     void requestUsingSpecialCharactersAsIdShouldReturnAnError() {
-        userRequest = new UserRequest();
+        userClient = new UserClient();
 
-        userRequest.getUsersById("@!#")
+        userClient.getUsersById("@!#")
                 .then()
                 .statusCode(HttpStatus.SC_BAD_REQUEST)
                 .body("status", is("error"))
