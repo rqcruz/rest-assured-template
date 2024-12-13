@@ -2,29 +2,32 @@ name: API Integrated Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+      - new-approach
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   test-execution:
     runs-on: ubuntu-latest
     permissions:
-        contents: write
+      contents: write
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn clean test
- 
-    - name: Deploy Test Report pages
-      uses: JamesIves/github-pages-deploy-action@v4.5.0
-      with:
-        branch: gh-pages
-        folder: target/integrated-test-report
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: mvn clean test
+
+      - name: Deploy Test Report pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: gh-pages
+          folder: target/integrated-test-report
