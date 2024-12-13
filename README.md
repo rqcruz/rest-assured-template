@@ -66,9 +66,9 @@ The project follows the structure below:
 │   │       ├── clients
 │   │       │   ├── login/
 │   │       │   └── users/
-│   │       ├── data
-│   │       │   └── payloads
-│   │       │       └── login/
+│   │       ├── dataprovider/
+│   │       ├── dto/
+│   │       ├── factory/
 │   │       ├── specifications/
 │   │       └── utils/
 │   └── test
@@ -83,11 +83,13 @@ The project follows the structure below:
 │               ├── login/
 │               └── users/
 ├── pom.xml
-├── README.md
+└── README.md
 ```
 
-- `src/main/java/data`: classes that return objects to be used/serialized in clients.
-- `src/main/java/clients`: classes that return methods that trigger clients. Each subfolder represents an API route.
+- `src/main/java/client`: classes that return methods that trigger clients. Each subfolder represents an API route.
+- `src/main/java/dataprovider`: classes that returns a set of data mass.
+- `src/main/java/dto`: classes that return objects to be used/serialized in clients.
+- `src/main/java/factory`: classes that returns a set of complex objects
 - `src/main/java/specifications`: classes with the specifications and other request configurations.
 - `src/main/java/utils`: classes with methods to provide auxiliary functionality that does not fit directly into a
   specific class.
