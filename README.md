@@ -65,6 +65,7 @@ The project follows the structure below:
 │   │   └── java
 │   │       ├── clients
 │   │       │   ├── login/
+│   │       │   ├── product/
 │   │       │   └── users/
 │   │       ├── dataprovider/
 │   │       ├── dto/
@@ -76,6 +77,7 @@ The project follows the structure below:
 │       │   ├── runner/
 │       │   └── tests
 │       │       ├── login/
+│       │       ├── products/
 │       │       └── users/
 │       └── resources
 │           ├── properties/
@@ -156,17 +158,14 @@ was created that allows the developer to enable and disable the generation of th
 This function is located inside the class `specifications/RequestSpecificationSetup.java`
 
 ```java
-enableRequestLog();
-
-enableResponseLog();
+requestAndResposeLog();
 ```
 
 To enable and disable logging, simply change the values of the variables `IS_ENABLE_REQUEST_LOG`
 and `IS_ENABLE_RESPONSE_LOG` to `true` or `false`.
 
 ```java
-private static final boolean IS_ENABLE_REQUEST_LOG = false;
-private static final boolean IS_ENABLE_RESPONSE_LOG = false;
+private static final boolean ENABLE_REQUEST_AND_RESPONSE_LOG = false;
 ```
 
 [back to the index 🔝](#index)
