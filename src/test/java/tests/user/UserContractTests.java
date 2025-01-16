@@ -10,30 +10,28 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 
 public class UserContractTests extends BaseApi {
 
-    private UserClient userClient;
+    private UserClient userClient = new UserClient();
 
     @Test
     @Tag("regression")
     @Tag("positive-scenario")
     @DisplayName("The request to get a valid user by ID should return the correct json schema")
     void getUserByIdShouldReturnTheCorrectJsonSchema() {
-        userClient = new UserClient();
-
-        userClient.getUsersById("1")
-                .then()
+        userClient
+                .getUsersById("1")
+                .assertThat()
                 .body(matchesJsonSchemaInClasspath("schemas/users/users-statuscode-200-schema.json"))
         ;
     }
 
     @Test
     @Tag("regression")
-    @Tag("positive-scenario")
+    @Tag("negative-scenario")
     @DisplayName("The request to get user by an invalid ID should return the correct json schema")
     void getUserByInvalidIdShouldReturnTheCorrectJsonSchema() {
-        userClient = new UserClient();
-
-        userClient.getUsersById("abc")
-                .then()
+        userClient
+                .getUsersById("abc")
+                .assertThat()
                 .body(matchesJsonSchemaInClasspath("schemas/users/users-statuscode-400-schema.json"))
         ;
     }
