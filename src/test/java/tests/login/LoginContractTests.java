@@ -10,7 +10,7 @@ import tests.BaseApi;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class LoginContractTest extends BaseApi {
+public class LoginContractTests extends BaseApi {
 
     @Test
     @Tag("regression")

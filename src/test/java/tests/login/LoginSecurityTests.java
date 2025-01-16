@@ -11,7 +11,7 @@ import tests.BaseApi;
 
 import static org.hamcrest.Matchers.is;
 
-public class LoginSecurityTest extends BaseApi {
+public class LoginSecurityTests extends BaseApi {
 
     LoginClient loginClient = new LoginClient();
 

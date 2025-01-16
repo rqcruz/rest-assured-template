@@ -11,7 +11,7 @@ import tests.BaseApi;
 
 import static org.hamcrest.Matchers.*;
 
-public class ConsultProductsFunctionalTest extends BaseApi {
+public class ConsultProductsFunctionalTests extends BaseApi {
 
     @Test
     @Tag("regression")

@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import client.login.LoginClient;
 import tests.BaseApi;
 
-public class LoginFunctionalTest extends BaseApi {
+public class LoginFunctionalTests extends BaseApi {
 
     LoginClient loginClient = new LoginClient();
 
