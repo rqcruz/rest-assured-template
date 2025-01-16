@@ -1,27 +1,28 @@
 package client.user;
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import specifications.Endpoints;
 import specifications.RequestSpecificationSetup;
 
+import static io.restassured.RestAssured.given;
+
 public class UserClient {
 
-    public Response getAllUsers() {
-        return RestAssured
-                .given()
+    public ValidatableResponse getAllUsers() {
+        return given()
                 .spec(new RequestSpecificationSetup().setDefautlRequestSpecification())
                 .when()
-                .get(Endpoints.getAllUsers());
+                .get(Endpoints.getAllUsers())
+                .then();
     }
 
-    public Response getUsersById(String userId) {
-        return RestAssured
-                .given()
+    public ValidatableResponse getUsersById(String userId) {
+        return given()
                 .spec(new RequestSpecificationSetup().setDefautlRequestSpecification())
                 .pathParam("id", userId)
                 .when()
-                .get(Endpoints.getUserById());
+                .get(Endpoints.getUserById())
+                .then();
     }
 
 }
