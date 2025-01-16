@@ -12,13 +12,14 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit-version>5.10.2</junit-version>
-        <junit-platform-suite-engine-version>1.10.2</junit-platform-suite-engine-version>
+        <junit-version>5.11.4</junit-version>
+        <junit-platform-suite-engine-version>1.11.4</junit-platform-suite-engine-version>
         <rest-assured-version>5.5.0</rest-assured-version>
-        <json-schema-validator-version>5.4.0</json-schema-validator-version>
+        <json-schema-validator-version>5.5.0</json-schema-validator-version>
         <maven-surefire-plugin-version>3.3.1</maven-surefire-plugin-version>
         <maven-surefire-junit5-tree-reporter-version>0.1.0</maven-surefire-junit5-tree-reporter-version>
         <extentreports-version>5.1.2</extentreports-version>
+        <junit5-tree-reporter-version>1.3.0</junit5-tree-reporter-version>
     </properties>
 
     <dependencies>
@@ -54,12 +55,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>${maven-surefire-plugin-version}</version>
                 <dependencies>
+                    <!-- https://github.com/fabriciorby/maven-surefire-junit5-tree-reporter -->
                     <dependency>
                         <groupId>me.fabriciorby</groupId>
                         <artifactId>maven-surefire-junit5-tree-reporter</artifactId>
-                        <version>0.1.0</version>
+                        <version>${junit5-tree-reporter-version}</version>
                     </dependency>
                 </dependencies>
                 <configuration>
