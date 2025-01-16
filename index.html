@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>API Integrated Test Execution Report</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API Integrated Test Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 13, 2024 03:04:11 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 16, 2025 01:13:26 PM</span></a>
 </li>
 </ul>
 </div>
@@ -80,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request should return the list of all users</p>
+            <p class="name">The request should add a new product</p>
             <p class="text-sm">
-              <span>3:04:13 AM</span> / <span>00:00:00:002</span>
+              <span>1:13:28 PM</span> / <span>00:00:00:007</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,10 +90,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request should return the list of all users</h5>
-<span class='badge badge-success'>12.13.2024 3:04:13 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:13 AM</span>
-<span class='badge badge-default'>00:00:00:002</span>
+<h5 class="test-status text-pass">The request should add a new product</h5>
+<span class='badge badge-success'>01.16.2025 1:13:28 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:28 PM</span>
+<span class='badge badge-default'>00:00:00:007</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -106,9 +106,52 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:13 AM</td>
+        <td>1:13:28 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/products
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          <pre>Request body:
+{
+  "title": "Brazilian Macaw Smartwatch",
+  "price": 14.0,
+  "description": "A smartwatch designed in honor of the Brazilian macaw",
+  "image": "https://fakestoreapi.com/img/br_macaw_IMG123.jpg",
+  "category": "gadget"
+}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "id": 21.0,
+  "title": "Brazilian Macaw Smartwatch",
+  "price": 14.0,
+  "description": "A smartwatch designed in honor of the Brazilian macaw",
+  "image": "https://fakestoreapi.com/img/br_macaw_IMG123.jpg",
+  "category": "gadget"
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -121,9 +164,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request using special characters instead number should return status code 400</p>
+            <p class="name">The request should return a product by idProduct</p>
             <p class="text-sm">
-              <span>3:04:16 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:28 PM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -131,9 +174,9 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request using special characters instead number should return status code 400</h5>
-<span class='badge badge-success'>12.13.2024 3:04:16 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:16 AM</span>
+<h5 class="test-status text-pass">The request should return a product by idProduct</h5>
+<span class='badge badge-success'>01.16.2025 1:13:28 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:28 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -147,9 +190,50 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:16 AM</td>
+        <td>1:13:28 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/products/1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          <pre>Request body:
+null</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:28 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "id": 1.0,
+  "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+  "price": 109.95,
+  "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+  "category": "men\u0027s clothing",
+  "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+  "rating": {
+    "rate": 3.9,
+    "count": 120.0
+  }
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -162,9 +246,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request using words instead number should return status code 400</p>
+            <p class="name">The request should return the list of all users</p>
             <p class="text-sm">
-              <span>3:04:17 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:29 PM</span> / <span>00:00:00:001</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -172,10 +256,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request using words instead number should return status code 400</h5>
-<span class='badge badge-success'>12.13.2024 3:04:17 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:17 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<h5 class="test-status text-pass">The request should return the list of all users</h5>
+<span class='badge badge-success'>01.16.2025 1:13:29 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:29 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -188,9 +272,260 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:17 AM</td>
+        <td>1:13:29 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/users
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          <pre>Request body:
+null</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          <pre>Response body:
+[
+  {
+    "address": {
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496"
+      },
+      "city": "kilcoole",
+      "street": "new road",
+      "number": 7682.0,
+      "zipcode": "12926-3874"
+    },
+    "id": 1.0,
+    "email": "john@gmail.com",
+    "username": "johnd",
+    "password": "m38rmF$",
+    "name": {
+      "firstname": "john",
+      "lastname": "doe"
+    },
+    "phone": "1-570-236-7033",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496"
+      },
+      "city": "kilcoole",
+      "street": "Lovers Ln",
+      "number": 7267.0,
+      "zipcode": "12926-3874"
+    },
+    "id": 2.0,
+    "email": "morrison@gmail.com",
+    "username": "mor_2314",
+    "password": "83r5^_",
+    "name": {
+      "firstname": "david",
+      "lastname": "morrison"
+    },
+    "phone": "1-570-236-7033",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "40.3467",
+        "long": "-30.1310"
+      },
+      "city": "Cullman",
+      "street": "Frances Ct",
+      "number": 86.0,
+      "zipcode": "29567-1452"
+    },
+    "id": 3.0,
+    "email": "kevin@gmail.com",
+    "username": "kevinryan",
+    "password": "kev02937@",
+    "name": {
+      "firstname": "kevin",
+      "lastname": "ryan"
+    },
+    "phone": "1-567-094-1345",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "50.3467",
+        "long": "-20.1310"
+      },
+      "city": "San Antonio",
+      "street": "Hunters Creek Dr",
+      "number": 6454.0,
+      "zipcode": "98234-1734"
+    },
+    "id": 4.0,
+    "email": "don@gmail.com",
+    "username": "donero",
+    "password": "ewedon",
+    "name": {
+      "firstname": "don",
+      "lastname": "romer"
+    },
+    "phone": "1-765-789-6734",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "40.3467",
+        "long": "-40.1310"
+      },
+      "city": "san Antonio",
+      "street": "adams St",
+      "number": 245.0,
+      "zipcode": "80796-1234"
+    },
+    "id": 5.0,
+    "email": "derek@gmail.com",
+    "username": "derek",
+    "password": "jklg*_56",
+    "name": {
+      "firstname": "derek",
+      "lastname": "powell"
+    },
+    "phone": "1-956-001-1945",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "20.1677",
+        "long": "-10.6789"
+      },
+      "city": "el paso",
+      "street": "prospect st",
+      "number": 124.0,
+      "zipcode": "12346-0456"
+    },
+    "id": 6.0,
+    "email": "david_r@gmail.com",
+    "username": "david_r",
+    "password": "3478*#54",
+    "name": {
+      "firstname": "david",
+      "lastname": "russell"
+    },
+    "phone": "1-678-345-9856",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "10.3456",
+        "long": "20.6419"
+      },
+      "city": "fresno",
+      "street": "saddle st",
+      "number": 1342.0,
+      "zipcode": "96378-0245"
+    },
+    "id": 7.0,
+    "email": "miriam@gmail.com",
+    "username": "snyder",
+    "password": "f238\u0026@*$",
+    "name": {
+      "firstname": "miriam",
+      "lastname": "snyder"
+    },
+    "phone": "1-123-943-0563",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "50.3456",
+        "long": "10.6419"
+      },
+      "city": "mesa",
+      "street": "vally view ln",
+      "number": 1342.0,
+      "zipcode": "96378-0245"
+    },
+    "id": 8.0,
+    "email": "william@gmail.com",
+    "username": "hopkins",
+    "password": "William56$hj",
+    "name": {
+      "firstname": "william",
+      "lastname": "hopkins"
+    },
+    "phone": "1-478-001-0890",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "40.12456",
+        "long": "20.5419"
+      },
+      "city": "miami",
+      "street": "avondale ave",
+      "number": 345.0,
+      "zipcode": "96378-0245"
+    },
+    "id": 9.0,
+    "email": "kate@gmail.com",
+    "username": "kate_h",
+    "password": "kfejk@*_",
+    "name": {
+      "firstname": "kate",
+      "lastname": "hale"
+    },
+    "phone": "1-678-456-1934",
+    "__v": 0.0
+  },
+  {
+    "address": {
+      "geolocation": {
+        "lat": "30.24788",
+        "long": "-20.545419"
+      },
+      "city": "fort wayne",
+      "street": "oak lawn ave",
+      "number": 526.0,
+      "zipcode": "10256-4532"
+    },
+    "id": 10.0,
+    "email": "jimmie@gmail.com",
+    "username": "jimmie_k",
+    "password": "klein*#%*",
+    "name": {
+      "firstname": "jimmie",
+      "lastname": "klein"
+    },
+    "phone": "1-104-001-4567",
+    "__v": 0.0
+  }
+]</pre>
         </td>
       </tr>
   </tbody>
@@ -198,24 +533,24 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="4"
+        <li class="test-item"  status="pass" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Test disabled for the purpose of displaying its status in the report</p>
+            <p class="name">The request using special characters instead number should return status code 400</p>
             <p class="text-sm">
-              <span>3:04:17 AM</span> / <span>00:00:00:000</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>1:13:29 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Test disabled for the purpose of displaying its status in the report</h5>
-<span class='badge badge-success'>12.13.2024 3:04:17 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:17 AM</span>
+<h5 class="test-status text-pass">The request using special characters instead number should return status code 400</h5>
+<span class='badge badge-success'>01.16.2025 1:13:29 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:29 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -228,10 +563,43 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:04:17 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:13:29 PM</td>
         <td>
-          Test disabled on purpose
+          Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/users/%40%21%23
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          Status Code: 400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          <pre>Request body:
+null</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "status": "error",
+  "message": "user id should be provided"
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -244,9 +612,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request should return a single users by ID</p>
+            <p class="name">The request using words instead number should return status code 400</p>
             <p class="text-sm">
-              <span>3:04:21 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:29 PM</span> / <span>00:00:00:001</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -254,10 +622,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request should return a single users by ID</h5>
-<span class='badge badge-success'>12.13.2024 3:04:21 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:21 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<h5 class="test-status text-pass">The request using words instead number should return status code 400</h5>
+<span class='badge badge-success'>01.16.2025 1:13:29 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:29 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -270,9 +638,42 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:21 AM</td>
+        <td>1:13:29 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/users/aaa
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          Status Code: 400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          <pre>Request body:
+null</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:29 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "status": "error",
+  "message": "user id should be provided"
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -280,24 +681,24 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="skip" test-id="6"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request should return a valid token</p>
+            <p class="name">Test disabled for the purpose of displaying its status in the report</p>
             <p class="text-sm">
-              <span>3:04:25 AM</span> / <span>00:00:00:000</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>1:13:29 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request should return a valid token</h5>
-<span class='badge badge-success'>12.13.2024 3:04:25 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:25 AM</span>
+<h5 class="test-status text-skip">Test disabled for the purpose of displaying its status in the report</h5>
+<span class='badge badge-success'>01.16.2025 1:13:29 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:29 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -310,10 +711,10 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:25 AM</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>1:13:29 PM</td>
         <td>
-          Test passed
+          Test disabled on purpose
         </td>
       </tr>
   </tbody>
@@ -326,9 +727,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request to get a valid user by ID should return the correct json schema</p>
+            <p class="name">The request should return a single users by ID</p>
             <p class="text-sm">
-              <span>3:04:25 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:30 PM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -336,9 +737,9 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request to get a valid user by ID should return the correct json schema</h5>
-<span class='badge badge-success'>12.13.2024 3:04:25 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:25 AM</span>
+<h5 class="test-status text-pass">The request should return a single users by ID</h5>
+<span class='badge badge-success'>01.16.2025 1:13:30 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:30 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -352,9 +753,60 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:25 AM</td>
+        <td>1:13:30 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/users/1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          <pre>Request body:
+null</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "address": {
+    "geolocation": {
+      "lat": "-37.3159",
+      "long": "81.1496"
+    },
+    "city": "kilcoole",
+    "street": "new road",
+    "number": 7682.0,
+    "zipcode": "12926-3874"
+  },
+  "id": 1.0,
+  "email": "john@gmail.com",
+  "username": "johnd",
+  "password": "m38rmF$",
+  "name": {
+    "firstname": "john",
+    "lastname": "doe"
+  },
+  "phone": "1-570-236-7033",
+  "__v": 0.0
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -367,9 +819,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request to get user by an invalid ID should return the correct json schema</p>
+            <p class="name">The request should return a valid token</p>
             <p class="text-sm">
-              <span>3:04:26 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:30 PM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -377,9 +829,9 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request to get user by an invalid ID should return the correct json schema</h5>
-<span class='badge badge-success'>12.13.2024 3:04:26 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:26 AM</span>
+<h5 class="test-status text-pass">The request should return a valid token</h5>
+<span class='badge badge-success'>01.16.2025 1:13:30 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:30 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -393,9 +845,44 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:26 AM</td>
+        <td>1:13:30 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/auth/login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          <pre>Request body:
+{
+  "username": "mor_2314",
+  "password": "83r5^_"
+}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:30 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTczNzAzMzIxMH0.cC7CqXWc9SmpQXbJ1VBfakZn0zwyMEdsYIVtFqxv1gk"
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -408,9 +895,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">The request should return a valid token</p>
+            <p class="name">The request to get a valid user by ID should return the correct json schema</p>
             <p class="text-sm">
-              <span>3:04:28 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:31 PM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -418,9 +905,9 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">The request should return a valid token</h5>
-<span class='badge badge-success'>12.13.2024 3:04:28 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:28 AM</span>
+<h5 class="test-status text-pass">The request to get a valid user by ID should return the correct json schema</h5>
+<span class='badge badge-success'>01.16.2025 1:13:31 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:31 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -434,9 +921,60 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:28 AM</td>
+        <td>1:13:31 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/users/1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          <pre>Request body:
+null</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "address": {
+    "geolocation": {
+      "lat": "-37.3159",
+      "long": "81.1496"
+    },
+    "city": "kilcoole",
+    "street": "new road",
+    "number": 7682.0,
+    "zipcode": "12926-3874"
+  },
+  "id": 1.0,
+  "email": "john@gmail.com",
+  "username": "johnd",
+  "password": "m38rmF$",
+  "name": {
+    "firstname": "john",
+    "lastname": "doe"
+  },
+  "phone": "1-570-236-7033",
+  "__v": 0.0
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -449,9 +987,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">[1] LoginDTO(username=fake, password=fake), username or password is incorrect</p>
+            <p class="name">The request to get user by an invalid ID should return the correct json schema</p>
             <p class="text-sm">
-              <span>3:04:29 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:31 PM</span> / <span>00:00:00:001</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -459,10 +997,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">[1] LoginDTO(username=fake, password=fake), username or password is incorrect</h5>
-<span class='badge badge-success'>12.13.2024 3:04:29 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:29 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<h5 class="test-status text-pass">The request to get user by an invalid ID should return the correct json schema</h5>
+<span class='badge badge-success'>01.16.2025 1:13:31 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:31 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -475,9 +1013,42 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:29 AM</td>
+        <td>1:13:31 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/users/abc
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          Status Code: 400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          <pre>Request body:
+null</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:31 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "status": "error",
+  "message": "user id should be provided"
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -490,9 +1061,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">[2] LoginDTO(username=fake, password=83r5^_), username or password is incorrect</p>
+            <p class="name">The request should return a valid token</p>
             <p class="text-sm">
-              <span>3:04:29 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:32 PM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -500,9 +1071,9 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">[2] LoginDTO(username=fake, password=83r5^_), username or password is incorrect</h5>
-<span class='badge badge-success'>12.13.2024 3:04:29 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:29 AM</span>
+<h5 class="test-status text-pass">The request should return a valid token</h5>
+<span class='badge badge-success'>01.16.2025 1:13:32 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:32 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -516,9 +1087,44 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:29 AM</td>
+        <td>1:13:32 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/auth/login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          <pre>Request body:
+{
+  "username": "mor_2314",
+  "password": "83r5^_"
+}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          <pre>Response body:
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTczNzAzMzIxMn0._tQCxfC6FB9km-qA7Q5S0w8L8Ze9kANkehi4_rYF--s"
+}</pre>
         </td>
       </tr>
   </tbody>
@@ -531,9 +1137,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">[3] LoginDTO(username=mor_2314, password=fake), username or password is incorrect</p>
+            <p class="name">[1] LoginDTO(username=fake, password=fake), username or password is incorrect</p>
             <p class="text-sm">
-              <span>3:04:29 AM</span> / <span>00:00:00:000</span>
+              <span>1:13:32 PM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -541,9 +1147,9 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">[3] LoginDTO(username=mor_2314, password=fake), username or password is incorrect</h5>
-<span class='badge badge-success'>12.13.2024 3:04:29 AM</span>
-<span class='badge badge-danger'>12.13.2024 3:04:29 AM</span>
+<h5 class="test-status text-pass">[1] LoginDTO(username=fake, password=fake), username or password is incorrect</h5>
+<span class='badge badge-success'>01.16.2025 1:13:32 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:32 PM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -557,9 +1163,190 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:04:29 AM</td>
+        <td>1:13:32 PM</td>
         <td>
           Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/auth/login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          Status Code: 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          <pre>Request body:
+{
+  "username": "fake",
+  "password": "fake"
+}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:32 PM</td>
+        <td>
+          <pre>Response body:
+username or password is incorrect</pre>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">[2] LoginDTO(username=fake, password=83r5^_), username or password is incorrect</p>
+            <p class="text-sm">
+              <span>1:13:33 PM</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[2] LoginDTO(username=fake, password=83r5^_), username or password is incorrect</h5>
+<span class='badge badge-success'>01.16.2025 1:13:33 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:33 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/auth/login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          Status Code: 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          <pre>Request body:
+{
+  "username": "fake",
+  "password": "83r5^_"
+}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          <pre>Response body:
+username or password is incorrect</pre>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">[3] LoginDTO(username=mor_2314, password=fake), username or password is incorrect</p>
+            <p class="text-sm">
+              <span>1:13:33 PM</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[3] LoginDTO(username=mor_2314, password=fake), username or password is incorrect</h5>
+<span class='badge badge-success'>01.16.2025 1:13:33 PM</span>
+<span class='badge badge-danger'>01.16.2025 1:13:33 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          Request URI: https://fakestoreapi.com/auth/login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          Status Code: 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          <pre>Request body:
+{
+  "username": "mor_2314",
+  "password": "fake"
+}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:13:33 PM</td>
+        <td>
+          <pre>Response body:
+username or password is incorrect</pre>
         </td>
       </tr>
   </tbody>
@@ -581,19 +1368,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 13, 2024 03:04:11 AM</h3>
+<h3>Jan 16, 2025 01:13:26 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 13, 2024 03:04:29 AM</h3>
+<h3>Jan 16, 2025 01:13:33 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>11</h3>
+<h3>13</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -615,8 +1402,8 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='91%'>
-<b>11</b> tests passed
+<div><small data-tooltip='92%'>
+<b>13</b> tests passed
 </small>
 </div>
 <div>
@@ -638,10 +1425,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='91%'><b>11</b> events passed</small></div>
+<div><small data-tooltip='19%'><b>13</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>1</b> others
+<b data-tooltip='%'>53</b> others
 </small>
 </div>
 </div>
@@ -657,7 +1444,7 @@
 </div></div>
 <script>
 var timeline = {
-"The request should return the list of all users":0.002,"The request using special characters instead number should return status code 400":0,"The request using words instead number should return status code 400":0,"Test disabled for the purpose of displaying its status in the report":0,"The request should return a single users by ID":0,"The request should return a valid token":0,"The request to get a valid user by ID should return the correct json schema":0,"The request to get user by an invalid ID should return the correct json schema":0,"The request should return a valid token":0,"[1] LoginDTO(username=fake, password=fake), username or password is incorrect":0,"[2] LoginDTO(username=fake, password=83r5^_), username or password is incorrect":0,"[3] LoginDTO(username=mor_2314, password=fake), username or password is incorrect":0
+"The request should add a new product":0.007,"The request should return a product by idProduct":0,"The request should return the list of all users":0.001,"The request using special characters instead number should return status code 400":0,"The request using words instead number should return status code 400":0.001,"Test disabled for the purpose of displaying its status in the report":0,"The request should return a single users by ID":0,"The request should return a valid token":0,"The request to get a valid user by ID should return the correct json schema":0,"The request to get user by an invalid ID should return the correct json schema":0.001,"The request should return a valid token":0,"[1] LoginDTO(username=fake, password=fake), username or password is incorrect":0,"[2] LoginDTO(username=fake, password=83r5^_), username or password is incorrect":0.001,"[3] LoginDTO(username=mor_2314, password=fake), username or password is incorrect":0.001
 };
 </script>
 <div class="row">
@@ -666,7 +1453,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 11,
+passParent: 13,
 failParent: 0,
 warningParent: 0,
 skipParent: 1,
@@ -683,11 +1470,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 11,
+passEvents: 13,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 1,
-infoEvents: 0
+infoEvents: 52
 };
 </script>        </div>
       </div>
