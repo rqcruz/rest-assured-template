@@ -43,6 +43,7 @@ using this template, it is possible to start a project with the architecture and
     * [Rest Assured](https://rest-assured.io/)
     * [Hamcrest Java](http://hamcrest.org/JavaHamcrest/)
     * [JUnit 5](https://junit.org/junit5/)
+    * [Datafaker](https://www.datafaker.net/)
 * Test Report: [ExtentReports](https://extentreports.com/)
 
 [back to the index 🔝](#index)
