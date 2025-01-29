@@ -3,7 +3,6 @@
 |    Branch    |                                                                                                    Pipeline                                                                                                     |
 |:------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |     main     |         [![pipeline](https://github.com/rqcruz/rest-assured-template/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/rqcruz/rest-assured-template/actions?query=branch%3Amain++)         |
-| new-approach | [![pipeline](https://github.com/rqcruz/rest-assured-template/actions/workflows/maven.yml/badge.svg?branch=new-approach)](https://github.com/rqcruz/rest-assured-template/actions?query=branch%3Anew-approach++) |
 
 |                📊 Test Execution Report                 |
 |:-------------------------------------------------------:|
