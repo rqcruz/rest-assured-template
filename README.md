@@ -1,8 +1,13 @@
 # Template for API testing automation with Rest Assured
 
-| Branch |                                              Pipeline                                              |              Latest Test Execution Report               |
-|--------|:--------------------------------------------------------------------------------------------------:|:-------------------------------------------------------:|
-| main   | ![pipeline](https://github.com/rqcruz/rest-assured-template/actions/workflows/maven.yml/badge.svg) | [link](https://rqcruz.github.io/rest-assured-template/) |
+|    Branch    |                                                                                                    Pipeline                                                                                                     |
+|:------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|     main     |         [![pipeline](https://github.com/rqcruz/rest-assured-template/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/rqcruz/rest-assured-template/actions?query=branch%3Amain++)         |
+| new-approach | [![pipeline](https://github.com/rqcruz/rest-assured-template/actions/workflows/maven.yml/badge.svg?branch=new-approach)](https://github.com/rqcruz/rest-assured-template/actions?query=branch%3Anew-approach++) |
+
+|                📊 Test Execution Report                 |
+|:-------------------------------------------------------:|
+| [link](https://rqcruz.github.io/rest-assured-template/) |
 
 ## Welcome 🖐️
 
@@ -38,6 +43,7 @@ using this template, it is possible to start a project with the architecture and
     * [Rest Assured](https://rest-assured.io/)
     * [Hamcrest Java](http://hamcrest.org/JavaHamcrest/)
     * [JUnit 5](https://junit.org/junit5/)
+    * [Datafaker](https://www.datafaker.net/)
 * Test Report: [ExtentReports](https://extentreports.com/)
 
 [back to the index 🔝](#index)
@@ -61,39 +67,45 @@ The project follows the structure below:
 ```
 .
 ├── src
+│   ├── main
+│   │   └── java
+│   │       ├── clients
+│   │       │   ├── login/
+│   │       │   ├── product/
+│   │       │   └── users/
+│   │       ├── dataprovider/
+│   │       ├── dto/
+│   │       ├── factory/
+│   │       ├── specifications/
+│   │       └── utils/
 │   └── test
 │       ├── java
-│       │   ├── data
-│       │   │   └── payloads
-│       │   │       └── login
-│       │   ├── requests
-│       │   │   ├── login
-│       │   │   └── users
-│       │   ├── runner
-│       │   ├── specifications
-│       │   ├── tests
-│       │   │   ├── login
-│       │   │   └── users
-│       │   └── utils
+│       │   ├── runner/
+│       │   └── tests
+│       │       ├── login/
+│       │       ├── products/
+│       │       └── users/
 │       └── resources
-│           ├── properties
+│           ├── properties/
 │           └── schema
-│               ├── login
-│               └── users
+│               ├── login/
+│               └── users/
 ├── pom.xml
-├── README.md
+└── README.md
 ```
 
-- `src/test/java/data`: classes that return objects to be used/serialized in requests.
-- `src/test/java/requests`: classes that return methods that trigger requests. Each subfolder represents an API route.
+- `src/main/java/client`: classes that return methods that trigger clients. Each subfolder represents an API route.
+- `src/main/java/dataprovider`: classes that returns a set of data mass.
+- `src/main/java/dto`: classes that return objects to be used/serialized in clients.
+- `src/main/java/factory`: classes that returns a set of complex objects
+- `src/main/java/specifications`: classes with the specifications and other request configurations.
+- `src/main/java/utils`: classes with methods to provide auxiliary functionality that does not fit directly into a
+  specific class.
 - `src/test/java/runner`: classes that run the test suites. They can run a specific group or all the tests in the
   project.
-- `src/test/java/specifications`: classes with the specifications and other request configurations.
 - `src/test/java/tests`: test classes. Each subfolder represents the test suite for an API route.
-- `src/test/java/utils`: classes with methods to provide auxiliary functionality that does not fit directly into a
-  specific class.
 - `src/test/resources/properties`: files with properties used by other classes.
-- `src/test/resources/schema`: files with the JSON schemas of the requests to be used in the contract tests.
+- `src/test/resources/schema`: files with the JSON schemas of the clients to be used in the contract tests.
 
 [back to the index 🔝](#index)
 <br/>
@@ -152,17 +164,14 @@ was created that allows the developer to enable and disable the generation of th
 This function is located inside the class `specifications/RequestSpecificationSetup.java`
 
 ```java
-enableRequestLog();
-
-enableResponseLog();
+requestAndResposeLog();
 ```
 
 To enable and disable logging, simply change the values of the variables `IS_ENABLE_REQUEST_LOG`
 and `IS_ENABLE_RESPONSE_LOG` to `true` or `false`.
 
 ```java
-private static final boolean IS_ENABLE_REQUEST_LOG = false;
-private static final boolean IS_ENABLE_RESPONSE_LOG = false;
+private static final boolean ENABLE_REQUEST_AND_RESPONSE_LOG = false;
 ```
 
 [back to the index 🔝](#index)

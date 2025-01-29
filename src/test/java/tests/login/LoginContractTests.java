@@ -1,25 +1,28 @@
 package tests.login;
 
+import dto.LoginDTO;
+import factory.LoginFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import requests.login.LoginRequest;
+import client.login.LoginClient;
 import tests.BaseApi;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import static org.hamcrest.Matchers.*;
 
-public class LoginContractTest extends BaseApi {
+public class LoginContractTests extends BaseApi {
 
     @Test
     @Tag("regression")
     @Tag("positive-scenario")
     @DisplayName("The request should return a valid token")
     public void postToGetAValidToken() {
-        LoginRequest loginRequest = new LoginRequest();
+        LoginClient loginClient = new LoginClient();
+        LoginDTO loginDTO = LoginFactory.getValidCredentials();
 
-        loginRequest.getLoginToken("mor_2314", "83r5^_")
-                .then()
+        loginClient
+                .getLoginToken(loginDTO)
+                .assertThat()
                 .body(matchesJsonSchemaInClasspath("schemas/login/login-statuscode-200-schema.json"))
         ;
     }

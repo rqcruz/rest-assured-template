@@ -2,26 +2,25 @@ package tests.user;
 
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.*;
-import requests.user.UserRequest;
+import client.user.UserClient;
 import tests.BaseApi;
 
 import static org.hamcrest.Matchers.*;
 
 public class UserFunctionalTests extends BaseApi {
 
-    private UserRequest userRequest;
+    private UserClient userClient = new UserClient();
 
     @Test
     @Tag("regression")
     @Tag("positive-scenario")
     @DisplayName("The request should return the list of all users")
     void getAllUsers() {
-        userRequest = new UserRequest();
-
-        userRequest.getAllUsers()
-                .then()
+        userClient
+                .getAllUsers()
+                .assertThat()
                 .statusCode(HttpStatus.SC_OK)
-                .body(not(isEmptyString()))
+                .body(not(emptyOrNullString()))
         ;
     }
 
@@ -30,16 +29,15 @@ public class UserFunctionalTests extends BaseApi {
     @Tag("positive-scenario")
     @DisplayName("The request should return a single users by ID")
     void getUserByID() {
-        userRequest = new UserRequest();
-
-        userRequest.getUsersById("1")
-                .then()
+        userClient
+                .getUsersById("1")
+                .assertThat()
                 .statusCode(HttpStatus.SC_OK)
-                .body("id", is(1))
-                .body("email", is("john@gmail.com"))
-                .body("name.firstname", is("john"))
-                .body("name.lastname", is("doe"))
-        ;
+                .body("id", is(1),
+                        "email", is("john@gmail.com"),
+                        "name.firstname", is("john"),
+                        "name.lastname", is("doe")
+                );
     }
 
     @Test
@@ -47,10 +45,9 @@ public class UserFunctionalTests extends BaseApi {
     @Tag("negative-scenario")
     @DisplayName("The request using words instead number should return status code 400")
     void requestUsingWordsAsIdShouldReturnAnError() {
-        userRequest = new UserRequest();
-
-        userRequest.getUsersById("aaa")
-                .then()
+        userClient
+                .getUsersById("aaa")
+                .assertThat()
                 .statusCode(HttpStatus.SC_BAD_REQUEST)
                 .body("status", is("error"))
                 .body("message", is("user id should be provided"))
@@ -62,10 +59,9 @@ public class UserFunctionalTests extends BaseApi {
     @Tag("negative-scenario")
     @DisplayName("The request using special characters instead number should return status code 400")
     void requestUsingSpecialCharactersAsIdShouldReturnAnError() {
-        userRequest = new UserRequest();
-
-        userRequest.getUsersById("@!#")
-                .then()
+        userClient
+                .getUsersById("@!#")
+                .assertThat()
                 .statusCode(HttpStatus.SC_BAD_REQUEST)
                 .body("status", is("error"))
                 .body("message", is("user id should be provided"))
@@ -74,6 +70,7 @@ public class UserFunctionalTests extends BaseApi {
 
     @Test
     @Tag("report")
+    @Tag("disabled")
     @Disabled("Test disabled on purpose")
     @DisplayName("Test disabled for the purpose of displaying its status in the report")
     void onlyToDisplayTheDisabledStatusInTheTestReport() {

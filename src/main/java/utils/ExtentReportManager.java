@@ -14,10 +14,9 @@ public class ExtentReportManager implements TestWatcher {
     private static final String REPORT_PATH = "target/integrated-test-report/index.html";
     private static final String REPORT_NAME = "API Integrated Test Execution Report";
     private static final String DOCUMENT_TITLE = "API Integrated Test Execution Report";
-    private static final String ENCODING = "utf-8";
+    private static final String ENCODING = "UTF-8";
 
     private final ExtentReports extentReports;
-    private ExtentTest test;
 
     public ExtentReportManager() {
         this.extentReports = createExtentReports();
@@ -42,17 +41,26 @@ public class ExtentReportManager implements TestWatcher {
 
     @Override
     public void testSuccessful(ExtensionContext context) {
-        createTest(context).pass("Test passed");
+        createTest(context).pass("Test passed")
+                .info("Request URI: " + RequestResponseLoggingFilter.getRequestUri())
+                .info("Status Code: " + RequestResponseLoggingFilter.getResponseStatusCode())
+                .info("<pre>Request body:\n" + RequestResponseLoggingFilter.getRequestBody() + "</pre>")
+                .info("<pre>Response body:\n" + RequestResponseLoggingFilter.getResponseBody() + "</pre>");
     }
 
     @Override
     public void testAborted(ExtensionContext context, Throwable cause) {
-        createTest(context).skip("Test aborted");
+        createTest(context).skip("Test aborted")
+                .info("Request URI: " + RequestResponseLoggingFilter.getRequestUri());
     }
 
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
-        createTest(context).fail(cause);
+        createTest(context).fail(cause)
+                .info("Request URI: " + RequestResponseLoggingFilter.getRequestUri())
+                .info("Status Code: " + RequestResponseLoggingFilter.getResponseStatusCode())
+                .info("<pre>Request body:\n" + RequestResponseLoggingFilter.getRequestBody() + "</pre>")
+                .info("<pre>Response body:\n" + RequestResponseLoggingFilter.getResponseBody() + "</pre>");
     }
 
     private ExtentTest createTest(ExtensionContext context) {
