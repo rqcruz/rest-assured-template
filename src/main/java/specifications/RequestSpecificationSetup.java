@@ -10,7 +10,7 @@ import utils.RequestResponseLoggingFilter;
 public class RequestSpecificationSetup {
 
     private RequestSpecBuilder requestSpecBuilder;
-    private static final boolean ENABLE_REQUEST_AND_RESPONSE_LOG = false;
+    private static final boolean ENABLE_REQUEST_AND_RESPONSE_LOG = true;
 
     public RequestSpecification setDefautlRequestSpecification() {
         requestSpecBuilder = new RequestSpecBuilder();
